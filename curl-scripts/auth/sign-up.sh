@@ -1,5 +1,5 @@
 #!/bin/bash
-# EMAIL='enrique-lol' PASSWORD='123' sh curl-scripts/auth/sign-up.sh
+# EMAIL='example_email' PASSWORD='example_password' sh curl-scripts/auth/sign-up.sh
 # Fully version 1 operational as of 01/06.
 
 API="http://localhost:4741"

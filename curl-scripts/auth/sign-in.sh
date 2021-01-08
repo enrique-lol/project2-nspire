@@ -1,5 +1,5 @@
 #!/bin/bash
-# EMAIL='enrique-lol' PASSWORD='123' sh curl-scripts/auth/sign-in.sh
+# EMAIL='example_email' PASSWORD='exapmle_password' sh curl-scripts/auth/sign-in.sh
 # Fully version 1 operational as of 01/06.
 
 

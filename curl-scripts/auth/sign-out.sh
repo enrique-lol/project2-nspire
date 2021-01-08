@@ -1,5 +1,5 @@
 #!/bin/bash
-# TOKEN='d433091e2669414eaf22ebb3c6e1d467' sh curl-scripts/auth/sign-out.sh
+# TOKEN='example_token' sh curl-scripts/auth/sign-out.sh
 # Fully version 1 operational as of 01/06.
 
 API="http://localhost:4741"
