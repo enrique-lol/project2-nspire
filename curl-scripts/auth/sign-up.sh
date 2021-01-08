@@ -1,8 +1,8 @@
 #!/bin/bash
-# EMAIL='example_email' PASSWORD='example_password' sh curl-scripts/auth/sign-up.sh
+# EMAIL="example@email" PASSWORD="example_password" sh curl-scripts/auth/sign-up.sh
 # Fully version 1 operational as of 01/06.
 
-API="http://localhost:4741"
+API="https://limitless-forest-94283.herokuapp.com"
 URL_PATH="/sign-up"
 
 curl "${API}${URL_PATH}" \
