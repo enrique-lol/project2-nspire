@@ -1,5 +1,5 @@
 #!/bin/bash
-# EMAIL="example@email" PASSWORD="example_password" sh curl-scripts/auth/sign-up.sh
+# EMAIL="review@email" PASSWORD="example_password" sh curl-scripts/auth/sign-up.sh
 # Fully version 1 operational as of 01/06.
 
 API="https://limitless-forest-94283.herokuapp.com"
