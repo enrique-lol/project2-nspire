@@ -1,6 +1,14 @@
 const mongoose = require('mongoose')
 
 const reviewSchema = new mongoose.Schema({
+  project: {
+    type: String,
+    required: true
+  },
+  artist: {
+    type: String,
+    required: true
+  },
   title: {
     type: String,
     required: true
@@ -8,6 +16,10 @@ const reviewSchema = new mongoose.Schema({
   text: {
     type: String,
     required: true
+  },
+  image: {
+    type: String,
+    required: false
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,

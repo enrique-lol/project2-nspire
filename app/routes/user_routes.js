@@ -46,6 +46,7 @@ router.post('/sign-up', (req, res, next) => {
       return {
         email: req.body.credentials.email,
         bio: req.body.accountdata.bio,
+        avi: req.body.accountdata.avi,
         hashedPassword: hash
       }
     })

@@ -10,10 +10,13 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  avi: {
+    type: String
+  },
   hashedPassword: {
     type: String,
     required: true
-  },  
+  },
   token: String
 }, {
   timestamps: true,
