@@ -171,6 +171,36 @@ router.patch('/change-bio', requireToken, (req, res, next) => {
     // pass any errors along to the error handler
     .catch(next)
 })
+////////////////////
+// CHANGE avi
+// PATCH /change-avi
+router.patch('/change-avi', requireToken, (req, res, next) => {
+  const newAvi = req.body.avi.new
+  let user
+  // `req.user` will be determined by decoding the token payload
+  User.findById(req.user.id)
+    // save user outside the promise chain
+    .then(record => { user = record })
+    // check that the old password is correct
+    .then(() => bcrypt.compare(req.body.passwords.old, user.hashedPassword))
+    // `correctPassword` will be true if hashing the password ends up the
+    // same as `user.hashedPassword`
+    .then(correctPassword => {
+      // throw an error if the password was wrong
+      if (!correctPassword) {
+        throw new BadParamsError()
+      }
+    })
 
+    .then(hash => {
+      // set and save the new hashed password in the DB
+      user.avi = newAvi
+      return user.save()
+    })
+    // respond with no content and status 200
+    .then(() => res.sendStatus(204))
+    // pass any errors along to the error handler
+    .catch(next)
+})
 
 module.exports = router
