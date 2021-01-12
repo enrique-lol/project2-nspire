@@ -131,7 +131,6 @@ router.patch('/change-password', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-
 router.delete('/sign-out', requireToken, (req, res, next) => {
   // create a new random token for the user, invalidating the current one
   req.user.token = null
@@ -171,7 +170,7 @@ router.patch('/change-bio', requireToken, (req, res, next) => {
     // pass any errors along to the error handler
     .catch(next)
 })
-////////////////////
+
 // CHANGE avi
 // PATCH /change-avi
 router.patch('/change-avi', requireToken, (req, res, next) => {
