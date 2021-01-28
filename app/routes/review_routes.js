@@ -77,7 +77,7 @@ router.post('/reviews', requireToken, (req, res, next) => {
 router.patch('/reviews/:id', requireToken, removeBlanks, (req, res, next) => {
   // if the client attempts to change the `owner` property by including a new
   // owner, prevent that by deleting that key/value pair
-  delete req.body.review.owner
+  // delete req.body.review.owner
 
   Review.findById(req.params.id)
     .then(handle404)
